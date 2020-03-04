@@ -1,0 +1,57 @@
+/*
+font-family: 'Permanent Marker', cursive;
+font-family: 'Roboto', sans-serif;
+*/
+*{
+    margin: 0;
+    padding: 0;;
+}
+nav{
+    background: black;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+ul{
+    list-style: none;
+    margin: auto !important;
+    color: white;
+}
+ul li{
+    display: inline;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 20px;
+    font-size: 1.1em;
+}
+.imgLogo{
+    margin: auto;
+}
+.whatsapp{
+    margin: auto;
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.whatsapp p{
+    margin: 5px 0 0 0;
+}
+.fa-whatsapp-square{
+    color: limegreen;
+    margin: 0 10px 0 0;
+    background: linear-gradient(black, black, white, white, white, white, white, white, white, white);
+    height: 40px;
+}
+.corteSecciones{
+    background-color: #323435;
+    padding: 15px;
+    color: #FCD96F;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.2em
+}
