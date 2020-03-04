@@ -6,7 +6,7 @@ font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;;
 }
-nav{
+.navBar{
     background: black;
     display: flex !important;
     flex-direction: row;
@@ -14,16 +14,38 @@ nav{
     align-items: center;
     padding: 5px;
 }
+nav{
+    margin:auto;
+    width:fit-content;
+}
 ul{
     list-style: none;
-    margin: auto !important;
-    color: white;
 }
-ul li{
-    display: inline;
-    font-family: 'Roboto', sans-serif;
-    margin: 0 20px;
-    font-size: 1.1em;
+nav ul li a{
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    cursor: pointer;
+}
+nav ul li a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+nav > ul > li{
+    float: left;
+}
+nav ul li ul{
+    display: none; 
+    position: absolute;
+    min-width: 140px;
+}
+/* nav ul li:hover > ul{
+    display: block;
+} */
+.segundo-nivel{
+    z-index: 10;
 }
 .imgLogo{
     margin: auto;
@@ -36,16 +58,22 @@ ul li{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .whatsapp p{
     margin: 5px 0 0 0;
+    transition: 0.5s ease-in-out;
+    padding: 0 5px 0 5px;
+    border-radius: 10px;
+}
+.whatsapp p:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
 }
 .fa-whatsapp-square{
     color: limegreen;
     margin: 0 10px 0 0;
-    background: linear-gradient(black, black, white, white, white, white, white, white, white, white);
-    height: 40px;
+    background: linear-gradient(black, white,white,white,white,white,white,white,white,white,white,white white, white, white, white, white, white, white);
 }
 .corteSecciones{
     background-color: #323435;
