@@ -2,11 +2,14 @@
 font-family: 'Permanent Marker', cursive;
 font-family: 'Roboto', sans-serif;
 */
-*{
+
+* {
     margin: 0;
-    padding: 0;;
+    padding: 0;
+    ;
 }
-.navBar{
+
+.navBar {
     background: black;
     display: flex !important;
     flex-direction: row;
@@ -14,43 +17,21 @@ font-family: 'Roboto', sans-serif;
     align-items: center;
     padding: 5px;
 }
-nav{
-    margin:auto;
-    width:fit-content;
+
+nav {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-ul{
-    list-style: none;
-}
-nav ul li a{
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    cursor: pointer;
-}
-nav ul li a:hover{
-    color: #fff;
-    text-decoration: none;
-}
-nav > ul > li{
-    float: left;
-}
-nav ul li ul{
-    display: none; 
-    position: absolute;
-    min-width: 140px;
-}
-/* nav ul li:hover > ul{
-    display: block;
-} */
-.segundo-nivel{
-    z-index: 10;
-}
-.imgLogo{
+
+.imgLogo {
     margin: auto;
 }
-.whatsapp{
+
+.whatsapp {
     margin: auto;
     color: white;
     font-size: 1.5em;
@@ -59,27 +40,69 @@ nav ul li ul{
     justify-content: center;
     align-items: center;
 }
-.whatsapp p{
+
+.whatsapp p {
     margin: 5px 0 0 0;
     transition: 0.5s ease-in-out;
     padding: 0 5px 0 5px;
     border-radius: 10px;
 }
-.whatsapp p:hover{
+
+.whatsapp p:hover {
     background: white;
     color: black;
     cursor: pointer;
 }
-.fa-whatsapp-square{
+
+.fa-whatsapp-square {
     color: limegreen;
     margin: 0 10px 0 0;
-    background: linear-gradient(black, white,white,white,white,white,white,white,white,white,white,white white, white, white, white, white, white, white);
+    background: linear-gradient(black, white, white, white, white, white, white, white, white, white, white, white white, white, white, white, white, white, white);
 }
-.corteSecciones{
+
+.corteSecciones {
     background-color: #323435;
     padding: 15px;
     color: #FCD96F;
     text-align: center;
     text-decoration: underline;
     font-size: 1.2em
+}
+
+.btn-group {
+    margin: 0 10px 0 10px;
+}
+
+.btn-gold {
+    color: white !important;
+    position: relative;
+}
+
+.btn-gold::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #EAC102;
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s all;
+    left: 50%;
+}
+
+.btn-gold:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.bg-black {
+    background: black !important;
+}
+
+.dropdown-item {
+    transition: 0.3s all;
+}
+
+.dropdown-item:hover {
+    background: rgb(83, 83, 83) !important;
 }
