@@ -6,29 +6,23 @@ font-family: 'Roboto', sans-serif;
 * {
     margin: 0;
     padding: 0;
-    ;
 }
 
-.navBar {
-    background: black;
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
+.custom-toggler.navbar-toggler {
+    border-color: #FCD96F !important;
 }
 
-nav {
-    margin: auto;
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.text-gold {
+    color: #FCD96F !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(252, 217, 111, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>") !important;
 }
 
 .imgLogo {
     margin: auto;
+    width: 100px;
 }
 
 .whatsapp {
@@ -107,6 +101,10 @@ nav {
     background: rgb(83, 83, 83) !important;
 }
 
+.img-carusel {
+    height: 450px;
+}
+
 .fiestasDestacadas {
     display: flex;
     justify-content: center;
@@ -150,9 +148,10 @@ nav {
     flex: 4;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     margin: 20px 0 50px 0;
+    background: white;
 }
 
 .flyer {
@@ -162,17 +161,20 @@ nav {
     align-items: center;
     padding: 0;
     width: 270px;
-    margin: 0 20px;
+    height: auto;
+    margin: 20px 20px;
     box-shadow: 1px 1px 4px 0.5px #808080;
 }
 
 .fotoFlyer {
     height: 300px;
-    width: 270px;
+    width: 100%;
 }
 
 .discoBanner {
     width: 100%;
+    height: 40px;
+    background-color: rgb(46, 46, 46);
 }
 
 .flyer h4 {
@@ -232,6 +234,7 @@ nav {
     transition: 0.3s ease-in-out;
     cursor: pointer;
     text-transform: uppercase;
+    margin: 0 0 25px 0;
 }
 
 .btn-Negro:hover {
@@ -246,14 +249,14 @@ nav {
 
 .contenedorDiscotecas {
     width: 100%;
-    height: 50vh;
+    height: fit-content;
     background: url("img/discoLight.jpg") no-repeat;
     background-size: 100% 100%;
 }
 
 .fondoContenedorDiscotecas {
     background: rgba(0, 0, 0, 0.8);
-    height: 50vh;
+    height: fit-content;
     color: white;
     display: flex;
     flex-direction: column;
@@ -262,10 +265,14 @@ nav {
     flex-wrap: wrap;
 }
 
+.fondoContenedorDiscotecas h2 {
+    margin-top: 25px;
+}
+
 .fondoContenedorDiscotecas p {
     width: 45%;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 
 .discotecasDestacadas {
@@ -274,11 +281,11 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 20px 0 50px 0;
+    margin: 0 0 50px 0;
 }
 
 .disco {
-    margin: 0 35px;
+    margin: 40px 35px;
 }
 
 .contenedorRestaurantes {
@@ -294,11 +301,12 @@ nav {
 .contenedorRestaurantes h2,
 .contenedorRestaurantes p {
     width: fit-content;
+    text-align: center;
 }
 
 .restaurantesDestacados {
     width: 100%;
-    height: 35vh;
+    height: fit-content;
     -webkit-transform: perspective(900px);
     -webkit-transform-style: preserve-3d;
     display: flex;
@@ -320,7 +328,7 @@ nav {
     margin: 0px 50px;
     background: linear-gradient(rgb(225, 150, 58), rgb(227, 144, 91));
     transition: .6s;
-    transform: rotatex(75deg) translatey(-200px) translatez(-100px);
+    transform: rotatex(70deg) translatey(-200px) translatez(-100px);
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -348,7 +356,7 @@ nav {
 .card1 p {
     color: white;
     width: 200px;
-    text-align: left;
+    text-align: left !important;
     transform: translatex(0px);
 }
 
@@ -393,6 +401,12 @@ nav {
     width: 80%;
 }
 
+.RRSS {
+    width: 25%;
+    height: fit-content;
+    /*border: 1px solid red;*/
+}
+
 .RRSS i {
     font-size: 1.75em !important;
     margin: 5px 5px;
@@ -403,6 +417,17 @@ nav {
 
 .RRSS i:hover {
     color: #FCD96F;
+}
+
+.footerContent {
+    width: 75%;
+    /*border: 1px solid lime;*/
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .footerContent span {
@@ -418,4 +443,328 @@ nav {
 
 .footerContent span:hover {
     color: #FCD96F;
+}
+
+
+/*
+MediaQuerys:
+(min-width:947px) and (max-width:1024px) {
+    Navbar no se toca,
+    Carusel no se toca,
+    Fiestas => flyers deben quedar dispuestos en 2x2
+    Discotecas no se toca,
+    Restaurantes no se toca (en ppio => ¿Quitar animacion?)
+    Footer no se toca
+}
+*/
+
+@media screen and (min-width:920px) and (max-width:1024px) {
+    .flyer {
+        margin: 20px 40px;
+    }
+    .contenedorDias {
+        padding: 30px 0 15px 0;
+    }
+    .diaSemana:nth-child(1) {
+        margin: 0 20px -17px 0;
+    }
+    .diaSemana:nth-child(7) {
+        margin: 0 0 -17px 20px;
+    }
+    .diaSemana {
+        margin: 0 20px -17px 20px;
+    }
+    .card1:nth-child(1),
+    .card1:nth-child(2) {
+        transform: rotatex(50deg) translatey(-200px) translatez(-100px);
+    }
+    .card1:nth-child(1):hover,
+    .card1:nth-child(2):hover {
+        transform: rotatex(0deg);
+        transform: rotatez(0deg);
+    }
+}
+
+
+/*
+(min-width:780px) and (max-width:946){
+    Navbar no tocar,
+    Carusel no tocar,
+    Fiestas => Dias de la semana más compactos
+    Discotecas => deben quedar dispuestos en 2x2
+    Restaurates no tocar
+    Footer => Reducir tamaño iconos RRSS, reducir letra.
+}
+*/
+
+@media screen and (min-width:780px) and (max-width:919px) {
+    .flyer {
+        margin: 20px 40px;
+    }
+    .contenedorDias {
+        padding: 30px 0 15px 0;
+    }
+    .diaSemana:nth-child(1) {
+        margin: 0 20px -17px 0;
+    }
+    .diaSemana:nth-child(7) {
+        margin: 0 0 -17px 20px;
+    }
+    .diaSemana {
+        margin: 0 20px -17px 20px;
+    }
+    .disco {
+        margin: 20px 75px;
+    }
+    .fondoContenedorDiscotecas p {
+        width: 70%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .card1:nth-child(1),
+    .card1:nth-child(2) {
+        transform: rotatex(50deg) translatey(-200px) translatez(-100px);
+    }
+    .card1:nth-child(1):hover,
+    .card1:nth-child(2):hover {
+        transform: rotatex(0deg);
+        transform: rotatez(0deg);
+    }
+    .contenedorRestaurantes p {
+        width: 70%;
+    }
+    .RRSS i {
+        font-size: 1.65em !important;
+    }
+}
+
+@media screen and (min-width:630px) and (max-width:779px) {
+    .flyer {
+        margin: 20px 40px;
+    }
+    .contenedorDias {
+        padding: 30px 0 15px 0;
+    }
+    .diaSemana:nth-child(1) {
+        margin: 0 20px -17px 0;
+    }
+    .diaSemana:nth-child(7) {
+        margin: 0 0 -17px 20px;
+    }
+    .diaSemana {
+        margin: 0 20px -17px 20px;
+    }
+    .disco {
+        margin: 20px 75px;
+    }
+    .fondoContenedorDiscotecas p {
+        width: 70%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .card1 {
+        transform: rotatex(0deg);
+        transform: rotatez(0deg);
+        margin: 20px 50px;
+        box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    .contenedorRestaurantes p {
+        width: 70%;
+    }
+    .RRSS i {
+        font-size: 1.65em !important;
+    }
+    .footerContent {
+        justify-content: flex-end;
+    }
+    .footerContent span {
+        margin: 5px 10px
+    }
+}
+
+@media screen and (min-width:475px) and (max-width:629px) {
+    h2 {
+        font-size: 1.75em !important;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .flyer {
+        margin: 20px 40px;
+        width: 100%;
+    }
+    .fotoFlyer {
+        height: 425px;
+    }
+    .contenedorDias {
+        padding: 30px 0 15px 0;
+    }
+    .diaSemana:nth-child(1) {
+        margin: 0 7px -17px 0;
+    }
+    .diaSemana:nth-child(7) {
+        margin: 0 0 -17px 7px;
+    }
+    .diaSemana {
+        margin: 0 7px -17px 7px;
+    }
+    .disco {
+        margin: 20px 75px;
+    }
+    .fondoContenedorDiscotecas p {
+        width: 70%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .card1 {
+        transform: rotatex(0deg);
+        transform: rotatez(0deg);
+        margin: 20px 50px;
+        box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
+    }
+    .fondoContenedorDiscotecas p,
+    .contenedorRestaurantes p {
+        width: 90%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .contenedorFooter {
+        flex-direction: column-reverse;
+    }
+    .RRSS {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .RRSS i {
+        margin: 10px 10px;
+    }
+    .RRSS i:nth-child(1) {
+        margin: 10px 10px 0 0;
+    }
+    .footerContent {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .footerContent span {
+        margin: 5px 5px
+    }
+    .footerContent span:nth-child(1),
+    .footerContent span:nth-child(3) {
+        margin: 5px 5px 5px 0;
+    }
+    .img-carusel {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:474px) {
+    h2 {
+        font-size: 1.5em !important;
+        text-align: center;
+        margin: 0 20px 10px 20px;
+    }
+    .flyer {
+        margin: 20px 20px;
+        width: 100%;
+        height: 100%;
+    }
+    .fotoFlyer {
+        height: auto;
+    }
+    .contenedorDias {
+        display: none;
+    }
+    .disco {
+        width: 100%;
+        margin: 20px 20px;
+    }
+    .disco img {
+        width: 100%;
+    }
+    .fondoContenedorDiscotecas p {
+        width: 70%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .card1 {
+        transform: rotatex(0deg);
+        transform: rotatez(0deg);
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+        width: 100%;
+        height: 375px;
+        margin: 20px 20px;
+        justify-content: flex-start;
+    }
+    .card1 img {
+        width: 90%;
+        height: 150px;
+        margin: 0;
+    }
+    .card1 p {
+        width: 90%;
+        margin: 0 0 30px 0 !important;
+    }
+    .btn-reservar {
+        margin: 0 0 10px 0;
+        padding: 10px 0;
+        width: 90%;
+    }
+    .fondoContenedorDiscotecas p {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    .contenedorRestaurantes h2,
+    .contenedorRestaurantes p {
+        width: calc(100%-40px);
+        text-align: center;
+        margin: 10px 20px;
+    }
+    .contenedorRestaurantes {
+        padding: 20px 0;
+    }
+    .contenedorFooter {
+        flex-direction: column-reverse;
+    }
+    .RRSS {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .RRSS i {
+        margin: 10px 10px;
+    }
+    .RRSS i:nth-child(1) {
+        margin: 10px 10px 0 0;
+    }
+    .footerContent {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .footerContent span {
+        margin: 5px 5px
+    }
+    .footerContent span:nth-child(1),
+    .footerContent span:nth-child(3) {
+        margin: 5px 5px 5px 0;
+    }
+    .img-carusel {
+        height: 300px;
+    }
+    .footer {
+        height: 150px;
+    }
+    .contenedorFlyers,
+    .discotecasDestacadas {
+        margin-bottom: 0px;
+    }
+    .btn-Negro,
+    .btn-Blanco {
+        width: calc(100%-40px);
+        margin: 0 20px 25px 20px;
+        padding: 8px 20px;
+    }
+    .fiestasDestacadas {
+        margin-bottom: 0px;
+    }
 }
