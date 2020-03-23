@@ -8,12 +8,20 @@ font-family: 'Roboto', sans-serif;
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .custom-toggler.navbar-toggler {
     border-color: #FCD96F !important;
 }
 
 .text-gold {
     color: #FCD96F !important;
+}
+
+.text-white {
+    color: #fff !important;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -167,7 +175,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 .fotoFlyer {
-    height: 300px;
+    height: 300px !important;
     width: 100%;
 }
 

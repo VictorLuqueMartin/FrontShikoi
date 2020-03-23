@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.todoDiscos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezadoDiscos h1 {
+    width: max-content;
+}
+
+.encabezadoDiscos form {
+    margin: 40px 0 40px 450px;
+}
+
+.contenedorTodoDiscos {
+    margin: 0px auto;
+}
+
+.encabezadoDiscos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formularioBuscador {
+    width: fit-content;
+    transition: .5s all;
+}
+
+.formularioBuscador i {
+    font-size: 20px;
+    padding: 18px;
+    background: rgb(50, 50, 50);
+    color: #fff;
+    border-radius: 50%;
+    transition: .5s all;
+    position: relative;
+    left: -59px;
+}
+
+.formularioBuscador input {
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    width: 500px;
+    transition: .5s all;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.formularioBuscador:hover input {
+    box-shadow: 0 0 5px 0 black;
+}
+
+.formularioBuscador input:focus {
+    box-shadow: 0 0 10px 0 black;
+    outline: none;
+}
+
+.formularioBuscador:hover i {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: dodgerblue;
+}
+
+.formularioBuscador i:hover {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: black;
+}
+
+.todasDiscotecas {
+    margin: 30px 0 50px 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 150px;
+    grid-row-gap: 50px;
+}
+
+.fotoDisco {
+    background: black;
+    height: 270px;
+    width: 270px;
+    box-shadow: 1px 1px 2px 0.5px #808080;
+    cursor: pointer;
+}
+
+.flyer h4 {
+    text-align: center;
+}
+
+
+/* 1366 - 1025: Reducir el column-gap y corregir el search para que vaya arriba */
+
+@media screen and (max-width:1370px) and (min-width:1025px) {
+    .contenedorTodoDiscos {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .todasDiscotecas {
+        grid-column-gap: 10px;
+    }
+    .encabezadoDiscos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .encabezadoDiscos form {
+        margin: 20px 0 0px 20px;
+    }
+    .encabezadoDiscos h1 {
+        margin: 20px 0 0 15px;
+    }
+    .formularioBuscador input {
+        width: 600px;
+    }
+}
+
+
+/*1024 - 768 Visualizacion en tablets, corregir el column gap, y el buscador*/
+
+@media screen and (max-width:1024px) and (min-width:768px) {
+    .contenedorTodoDiscos {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .todasDiscotecas {
+        grid-column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .encabezadoDiscos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .encabezadoDiscos form {
+        margin: 20px 0 0px 35px;
+    }
+    .encabezadoDiscos h1 {
+        margin: 20px 0 0 32px;
+    }
+    .formularioBuscador input {
+        width: 670px;
+    }
+}
+
+@media screen and (min-width:476px) and (max-width:767px) {
+    .contenedorTodoDiscos {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .todasDiscotecas {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+    }
+    .encabezadoDiscos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .encabezadoDiscos form {
+        margin: 20px 0 0px 35px;
+    }
+    .encabezadoDiscos h1 {
+        margin: 20px 0 0 32px;
+    }
+    .formularioBuscador input {
+        width: 350px;
+    }
+    .fotoDisco {
+        height: 350px;
+        width: 100%;
+    }
+    .flyer {
+        width: 370px;
+    }
+}
+
+@media screen and (max-width:475px) and (min-width:320px) {
+    .contenedorTodoDiscos {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .todasDiscotecas {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+    }
+    .encabezadoDiscos {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .encabezadoDiscos form {
+        margin: 20px 0 0px 15px;
+    }
+    .encabezadoDiscos h1 {
+        margin: 20px 0 0 12px;
+    }
+    .formularioBuscador input {
+        width: 275px;
+    }
+    .fotoDisco {
+        height: 350px;
+        width: 100%;
+    }
+    .flyer {
+        width: 320px;
+        height: fit-content;
+    }
+}
