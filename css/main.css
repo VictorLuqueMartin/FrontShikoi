@@ -46,6 +46,10 @@ a {
     width: fit-content !important;
 }
 
+.w-80 {
+    width: 80%;
+}
+
 .bg-light-grey {
     background: rgb(242, 242, 242);
 }
