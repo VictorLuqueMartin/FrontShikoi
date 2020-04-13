@@ -1,0 +1,211 @@
+.selectDia {
+    display: none;
+}
+
+.diaSemana {
+    cursor: pointer;
+}
+
+.buscadorFiestas {
+    background: #e7e7e7;
+    padding: 0 10% 0 15%;
+}
+
+.formularioBuscador {
+    width: fit-content;
+    transition: .5s all;
+}
+
+.formularioBuscador i {
+    font-size: 20px;
+    padding: 18px;
+    background: rgb(50, 50, 50);
+    color: #fff;
+    border-radius: 50%;
+    transition: .5s all;
+    position: relative;
+    left: -59px;
+}
+
+.formularioBuscador input {
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    width: 500px;
+    transition: .5s all;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.formularioBuscador:hover input {
+    box-shadow: 0 0 5px 0 black;
+}
+
+.formularioBuscador input:focus {
+    box-shadow: 0 0 10px 0 black;
+    outline: none;
+}
+
+.formularioBuscador:hover i {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: dodgerblue;
+}
+
+.formularioBuscador i:hover {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+
+.flyer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 300px !important;
+    border: 1px solid red;
+    height: fit-content !important;
+    margin: 20px 0 0 0 !important;
+    box-shadow: 1px 1px 4px 0.5px #808080;
+}
+
+.fotoFlyer {
+    height: 300px !important;
+    width: 100%;
+}
+
+.discoBanner {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(46, 46, 46);
+}
+
+.flyer h4 {
+    width: 80%;
+    height: 30px;
+    border: 1px solid blue;
+    margin: 10px 0 15px 0;
+    text-align: left;
+    overflow: hidden;
+}
+
+.datosFlyer {
+    text-align: left;
+    width: 80%;
+    line-height: 5px;
+    color: #4d4d4d;
+    font-size: small;
+}
+
+.datosFlyer p i {
+    margin: 0 5px 0 0;
+}
+
+.btn-apuntarme {
+    background: #FCD96F;
+    text-align: center;
+    width: 80%;
+    margin: 5px 0 15px 0;
+    padding: 5px 0;
+    border: 2px solid #FFD700;
+    transition: 0.5s ease-in-out;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn-apuntarme:hover {
+    background: #FFD700;
+}
+
+.container-fluid {
+    padding: 5% 10% 5% 15% !important;
+}
+
+@media screen and (max-width:1635px) {
+    .flyer {
+        width: 250px !important;
+    }
+    .fotoFlyer {
+        height: 250px !important;
+    }
+}
+
+@media screen and (max-width:1365px) {
+    .flyer {
+        width: 225px !important;
+    }
+    .fotoFlyer {
+        height: 225px !important;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .flyer {
+        width: 400px !important;
+    }
+    .fotoFlyer {
+        height: 400px !important;
+    }
+}
+
+@media screen and (max-width:1145px) {
+    .flyer {
+        width: 275px !important;
+    }
+    .fotoFlyer {
+        height: 275px !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .flyer {
+        width: 400px !important;
+    }
+    .fotoFlyer {
+        height: 400px !important;
+    }
+    .col- {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:555px) {
+    .flyer {
+        width: 300px !important;
+    }
+    .fotoFlyer {
+        height: 300px !important;
+    }
+    .col- {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:415px) {
+    .flyer {
+        width: 250px !important;
+    }
+    .fotoFlyer {
+        height: 250px !important;
+    }
+    .col- {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:731px) {
+    .contenedorDias {
+        display: none;
+    }
+    .selectDia {
+        display: block;
+    }
+}
