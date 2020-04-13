@@ -73,6 +73,7 @@
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     background: black;
+    cursor: pointer;
 }
 
 .todasDiscotecas {
