@@ -12,7 +12,6 @@ function fechaDeHoy() {
 fechaDeHoy();
 
 function diaActivo() {
-    var diaSemana = document.getElementsByClassName("diaSemana");
     switch (fecha.getDay()) {
         case 0:
             console.log('Domingo');
@@ -43,7 +42,6 @@ function diaActivo() {
             console.log('Viernes');
             var diaViernes = document.getElementById("diaViernes");
             diaViernes.classList.add("activeDia");
-
             break;
         case 6:
             console.log('Sábado');
