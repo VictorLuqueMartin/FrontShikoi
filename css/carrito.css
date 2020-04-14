@@ -1,0 +1,45 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+body {
+    margin-bottom: 30vh;
+}
+
+input {
+    padding: 10px 10px !important;
+    outline: none;
+}
+
+section form {
+    background: rgba(153, 226, 255, 0.5);
+    height: fit-content;
+}
+
+section {
+    height: 100%;
+}
+
+.formularioContacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:457px) {
+    .formularioContacto {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .formularioContacto input[type=submit] {
+        margin-top: 10px;
+    }
+}
