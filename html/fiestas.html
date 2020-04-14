@@ -7,6 +7,7 @@
     <title>Shikoi VIP</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/fiestas.css">
+    <link rel="stylesheet" type="text/css" href="../css/select.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9e5857f453.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -60,8 +61,8 @@
     <!-- FIN NavBar -->
     <!-- Comienzo Menu Fiestas -->
     <section>
-        <div class="buscadorFiestas">
-            <h2>Fiestas en Madrid</h2>
+        <div class="container-fluid bg-light">
+            <h1>Fiestas en Madrid</h1>
             <div class="contenedorDias">
                 <p id="diaLunes" class="diaSemana dia">Lunes</p>
                 <p id="diaMartes" class="diaSemana dia">Martes</p>
@@ -71,18 +72,38 @@
                 <p id="diaSabado" class="diaSemana dia">Sábado</p>
                 <p id="diaDomingo" class="diaSemana dia">Domingo</p>
             </div>
-            <div class="selectDia">
-                <select name="" id="">            
-                <option value="Lunes">adad</option>
-                <option value="Martes">dadawdaw</option>
-                <option value="Miercoles">dawda</option>
-                <option value="Jueves">dawdaw</option>
-                <option value="Viernes">dawdawd</option>
-                <option value="Sabado">dawdaw</option>
-                <option value="Domingo">dawdaw</option>
-            </select>
+            <div class="contenedorSelect">
+                <div class="drop">
+                    <div class="option active placeholder" data-value="placeholder">
+                        Seleccione Dia de la Semana
+                    </div>
+                    <div class="option" data-value="wow">
+                        Lunes
+                    </div>
+                    <div class="option" data-value="drop">
+                        Martes
+                    </div>
+                    <div class="option" data-value="select">
+                        Miercoles
+                    </div>
+                    <div class="option" data-value="custom">
+                        Jueves
+                    </div>
+                    <div class="option" data-value="animation">
+                        Viernes
+                    </div>
+                    <div class="option" data-value="animation">
+                        Sábado
+                    </div>
+                    <div class="option" data-value="animation">
+                        Domingo
+                    </div>
+                </div>
             </div>
-            <form class="formularioBuscador mt-5">
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+            <script src="../js/select.js"></script>
+            <form class="formularioBuscador my-4">
                 <input type="text" name="buscadorDiscotecas" id="" placeholder="Buscar Discoteca o Fiesta">
                 <i class="fas fa-search"></i>
             </form>

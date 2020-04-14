@@ -42,8 +42,3 @@ function diaActivo() {
     }
 }
 diaActivo();
-/* 
-function selecDia() {
-    
-}
-selecDia(); */

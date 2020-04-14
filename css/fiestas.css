@@ -8,12 +8,16 @@
 
 .buscadorFiestas {
     background: #e7e7e7;
-    padding: 0 10% 0 15%;
+    padding: 15px 10% 0px 15%;
 }
 
 .formularioBuscador {
-    width: fit-content;
+    width: 100%;
     transition: .5s all;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
 }
 
 .formularioBuscador i {
@@ -24,7 +28,7 @@
     border-radius: 50%;
     transition: .5s all;
     position: relative;
-    left: -59px;
+    left: -50px;
 }
 
 .formularioBuscador input {
@@ -65,7 +69,6 @@
     align-items: center;
     padding: 0;
     width: 300px !important;
-    border: 1px solid red;
     height: fit-content !important;
     margin: 20px 0 0 0 !important;
     box-shadow: 1px 1px 4px 0.5px #808080;
@@ -84,8 +87,7 @@
 
 .flyer h4 {
     width: 80%;
-    height: 30px;
-    border: 1px solid blue;
+    height: 35px;
     margin: 10px 0 15px 0;
     text-align: left;
     overflow: hidden;
@@ -152,10 +154,31 @@
 
 @media screen and (max-width:1145px) {
     .flyer {
-        width: 275px !important;
+        width: 350px !important;
     }
     .fotoFlyer {
-        height: 275px !important;
+        height: 350px !important;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .flyer {
+        width: 300px !important;
+    }
+    .fotoFlyer {
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .flyer {
+        width: 250px !important;
+    }
+    .fotoFlyer {
+        height: 250px !important;
+    }
+    .formularioBuscador input {
+        width: 550px;
     }
 }
 
@@ -170,6 +193,24 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    h1 {
+        text-align: center;
+    }
+    .formularioBuscador input {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:731px) {
+    .formularioBuscador {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .formularioBuscador input {
+        margin-left: 50px;
     }
 }
 
