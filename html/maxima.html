@@ -7,7 +7,6 @@
     <title>Shikoi VIP</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/maxima.css">
-    <link rel="stylesheet" type="text/css" href="../css/select.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9e5857f453.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -59,8 +58,8 @@
             </ul>
     </nav>
     <!-- FIN NavBar -->
-    <div class="container-fluid">
-        <div class="row h-100 border border-primary position-relative">
+    <div class="container-fluid contenedorMaxima">
+        <div class="row">
             <div class="col-xl-6 maximoCajas">
                 <img class="w-100 h-100" src="../img/carousel1.jpg" alt="">
             </div>
@@ -83,10 +82,19 @@
                     <hr class="new1 my-2">
                 </div>
 
-                <h3 class="mt-3">¿Cuantas entradas va a reservar?</h3>
-                <input type="number" name="" id="" class="mt-2 contenedorSelect2 text-white" placeholder="¿Cuantas entradas desea comprar?" min="0" max="10">
-                <h3 class="pr-2 py-2 mt-3">Precio Total:</h3>
-                <h3 class="w-fit bg-success text-white rounded px-2 py-2 mt-3">19.99€</h3>
+                <form action="">
+                    <h3 class="mt-3 tituloForm">¿Cuantas entradas va a reservar?</h3>
+                    <input type="number" name="" id="" class="mt-2 contenedorSelect2 text-white" placeholder="¿Cuantas entradas desea comprar?" min="0" max="10">
+                    <div class="contenedorPrecios mt-3">
+                        <div class="col-12 d-flex align-items-center justify-content">
+                            <h3 class="pr-3 py-2">Precio Total:</h3>
+                            <h3 class="bg-success text-white rounded px-3 py-2">19.99€</h3>
+                        </div>
+                        <div class="col-12 mt-2 noPadding">
+                            <input type="submit" value="Añadir al carrito" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
